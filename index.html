@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MASCUINIELA</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        font-family: "Nunito", sans-serif;
+        font-weight: 300;
+      }
+
+      th, td {
+        border: 0px;
+        padding: 8px;
+        text-align: center;
+      }
+
+      .logo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+
+      .content{
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+      }
+    </style>
+
+  </head>
+  <body style="background-color: #DDFFDD;">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <div class="content">
+      <img src="MASCUINIELA LOGO.svg" class="logo">
+      <table id="dataTable"></table>
+    </div>
+
+    <script>
+      async function fetchDataAndUpdateTable() {
+        const response = await fetch('js quiniela ex.csv');
+        const csvData = await response.text();
+
+        const rows = csvData.split('\n');
+        const table = document.getElementById('dataTable');
+        table.innerHTML = ''; // Clear existing table data
+
+        for (let i = 0; i < rows.length; i++) {
+          const cells = rows[i].split(';');
+          const row = table.insertRow();
+
+          for (let j = 0; j < cells.length; j++) {
+            const cell = row.insertCell();
+            if (i === 0) {
+              cell.outerHTML = `<th>${cells[j]}</th>`; // Header row
+            } else {
+              cell.innerHTML = cells[j];
+            }
+          }
+        }
+      }
+
+      // Initial fetch and update
+      fetchDataAndUpdateTable();
+
+      // Periodically check for updates (every 5 seconds)
+      setInterval(fetchDataAndUpdateTable, 5000);
+
+    </script>
+
+  </body>
+</html>
