@@ -1,10 +1,10 @@
 Parleyero;Puntos;Hoy;;Parleyero;Puntos;Hoy;;Parleyero;Puntos
 FRAN;99;24;;JESUS;155;16;;JESUS;244
 LUIS;98;22;;KARIM;137;16;;LUIS;233
-OSCAR;97;7;;SAMU :cross_mark:;135;8;;OSCAR;221
+OSCAR;97;7;;SAMU :x:;135;8;;OSCAR;221
 JESUS;89;26;;LUIS;135;16;;KARIM;218
 RAZIEL;84;22;;OSCAR;124;24;;TOTE;193
-KARIM :cross_mark:;81;14;;TOTE :cross_mark:;112;8;;MAYESTI :cross_mark:;177
-TOTE;81;14;;MAYESTI :cross_mark:;103;16;;SAMU :cross_mark:;135
-MAYESTI :cross_mark:;74;14;;FRAN :cross_mark:;1;0;;FRAN :cross_mark:;100
-SAMU :cross_mark:;0;0;;;;;;RAZIEL :cross_mark:;84
+KARIM :x:;81;14;;TOTE :x:;112;8;;MAYESTI :x:;177
+TOTE;81;14;;MAYESTI :x:;103;16;;SAMU :x:;135
+MAYESTI :x:;74;14;;FRAN :x:;1;0;;FRAN :x:;100
+SAMU :x:;0;0;;;;;;RAZIEL :x:;84
